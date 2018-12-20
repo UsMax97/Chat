@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container" id="chat">
+  <div class="messages" id="messages">
+    <div class="sent-message" v-for="message in messages">
+      {{message.message}}
+    </div>
+  </div>
+  <div class="input-container">
+
+    <textarea id="chat-input" @keyup.enter="send" class="message-input" v-model="inputMessage"></textarea>
+    <div class="send-button-container">
+      <button id="submit-message" v-on:click="send" class="send-message">Ввод</button>
+    </div>
+  </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
